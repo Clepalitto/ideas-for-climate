@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IdeasForClimate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=REM&family=Roboto+Mono:wght@500&family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+    <style>
+        #hero{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        body{
+            background: rgb(60,58,180);
+            background: linear-gradient(132deg, rgba(60,58,180,1) 0%, rgba(29,180,253,1) 38%, rgba(69,252,142,1) 76%);
+        }
+        #main{
+            color: white;
+            font-size: 35px;
+            max-width: 50%;
+            font-family: 'Roboto Mono', monospace;
+            justify-content: center;
+        }
+        button{
+            font-family: 'Roboto Mono', monospace;
+            font-size: 25px;    
+            background-color: white;
+            border: none;
+            border-radius: 15px;
+            padding: 20px;    
+        }
+    </style>
+    <script>
+        function getRandomArbitrary(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        
+
+        function get() {
+            how = ["by talking to decision makers", "by mobilizing many fellow citizens", "by collecting signatures", "by pointing out beneficial alternatives", "by being an active member of an association", "by campaigning in the social media"]
+            where = ["in my city", "at my workplace", "in my neighbourhood", "in public space", "at my school/university", "with my friends"]
+            activities = ["introduce", "demand", "initiate", "achieve", "recommend", "implement"]
+            what = ["fair trade products as standard", "support on public transportation and expansion of cycle paths", "durability as a purchase criterium for new equipment", "sustainable food supply", "electricity from renewable energy", "protection of the oceans"]
+            withhom = ["Together with my family", "Together with my superior", "Together with my colleagues", "Together with friends", "Together with my classmates", "Together with my partner"]
+            
+            const one = withhom[Math.floor(Math.random() * withhom.length)];
+            const two = activities[Math.floor(Math.random() * activities.length)];
+            const three = what[Math.floor(Math.random() * what.length)];
+            const four = where[Math.floor(Math.random() * where.length)];
+            const five = how[Math.floor(Math.random() * how.length)];
+
+            const phrase = one+", I can "+two+" "+three+" "+four+" "+five+". ";
+
+            document.getElementById("phrase").innerHTML = phrase;
+            document.getElementById("button").innerHTML = "Something new ?";
+        }
+    </script>
+</head>
+<body>
+    <section id="hero">
+        <div id="main">
+            <h1 id="phrase">IdeasForClimate</h1>
+            <button onclick="get()" id="button">Tell me what I can do</button>
+        </div>
+    </section>
+</body>
+</html>
