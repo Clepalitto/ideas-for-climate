@@ -1,5 +1,5 @@
 # IdeasForClimate 🌍
-Just a little python script to generate actions that can be done to tackle climate change at individual scale ...
+Just a little python script with a small website to generate actions that can be done to tackle climate change at small scale ...
 
 Please do contribute if you have any ideas or comments 😄
 
